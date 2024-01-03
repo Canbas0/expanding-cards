@@ -1,0 +1,76 @@
+@import url('https://fonts.googleapis.com/css2?family=Hachi+Maru+Pop&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: rgb(36, 63, 112);
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    font-family: 'Hachi Maru Pop', sans-serif;
+}
+
+.picsum1 {
+    background-image: url("/img/summer.jpg");
+}
+
+.picsum2 {
+    background-image: url("/img/winter.jpg");
+}
+
+.picsum3 {
+    background-image: url("/img/spring.jpg");
+}
+
+.picsum4 {
+    background-image: url("/img/fall.jpg");
+}
+
+.title{
+    font-size: 50px;
+    margin-bottom: 20px;
+}
+
+.main {
+    display: flex;
+    height: 75%;
+    width: 50%;
+}
+
+.card {
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    flex: 0.5;
+    margin: 0px 10px;
+    transition: flex 0.9s ease-in-out;
+    opacity: 0.5;
+    position: relative;
+    border: 1px solid white;
+    border-radius: 10px;
+}
+
+h1 {
+    position: absolute;
+    font-size: 35px;
+    top: 0;
+    left: 0;
+    border-radius: 10px 0 0 0;
+    background-color: rgb(36, 63, 112);
+    color: white;
+    opacity: 0;
+    transition: all 0.9s ease-in-out;
+}
+
+.card.active,
+.active>h1 {
+    flex: 5;
+    opacity: 1;
+}
+
